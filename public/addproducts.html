@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="shop.js"></script>
+    <script src="addproduct.js"></script>
+    <style>  
+    body {
+        background-image: url("shopping-online-sale-background_23-2147509490.jpg");
+        height: 100%;
+         background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    html{
+      height: 100%;
+    }
+    </style>
+    <title>Document</title>
+</head>
+<body> 
+ 
+    <div class="p-4">
+        <h1  style="background-color:chocolate"  class="text-center">Add Product</h1>
+        <div class="row">
+            <div class="col"></div>
+    </div>
+            <!-- <div class="col-6">
+                <form>
+                    <div class="form-group">
+                        <label for="productName">Product Name</label>
+                        <input type="text" id="productName">
+                    </div>
+                    <div class="form-group">
+                        <label for="productManufacturer">Manufacturer</label>
+                        <input type="text" id="productManufacturer">
+                    </div>
+                    <div class="form-group">
+                        <label for="productPrice">Price</label>
+                        <input type="number" id="productPrice">
+                    </div>
+                </form>             
+            </div> -->
+              
+<div class="container">
+        
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="productName" style="background: crimson">Product Name</label>
+            <input type="text" id="productName" name='name'>
+        </div>
+        <div class="form-group"> 
+            <label for="productManufacturer">Manufacturer</label>
+            <input type="text" id="productManufacturer" name='manufacturer'>
+         </div>
+        <div class="form-group">
+            <label for="productPrice">Price</label>
+            <input type="number" id="productPrice" name='price'>
+        </div>
+        <div class="form-group">
+                <label for="productDescription">Description</label>
+                <input type="text" id="productDescription" name='description'>
+            </div>
+            <!-- <div class="file-field input-field">-->
+              <div class="btn grey">
+                <span>File</span>
+                <input name="myImage" type="file">
+              </div>
+
+            <button type="submit" class="btn">submit</button>
+          </form>
+    </div>
+</body>
+</html>
