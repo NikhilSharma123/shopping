@@ -143,6 +143,6 @@ server.post('/upload',(req,res)=>{
 
 
 
-app.listen('8044',()=>{
+app.listen(process.env.PORT || 3000,()=>{
     console.log("localhost://1235")
 })
