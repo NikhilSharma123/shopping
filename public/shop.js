@@ -15,20 +15,18 @@ socket.on('recv', function (data) {
 })
  
 function createProductCard (product) {
-    return $(`
+    return $(` 
     <div class="col-3 card m-2 p-0">
-    <img src="/uploads/${product.image}" style='height:240px;width:240px;' >
+    <img src="/uploads/${product.image}"  style='height:240px;width:100%;' >
         <h4 class="product-name">Product: ${product.name}</h4>
         <div class="product-manufacturer">Manufacturer: ${product.manufacturer}</div>
         <div class="product-description">Description: ${product.description}</div>
         <div class="product-description">Userid: ${product.userid}</div>
+        <div class="product-price">Price : Rs. ${product.price}</div>
         <div class="row">
-            <div class="col m-3 p-5">
-                <b>Rs. ${product.price}</b>
-            </div>
-            <button class="col btn btn-primary m-3">Buy</button>
-
+        <button class="col btn btn-primary m-3">Buy</button>
         </div>
-    </div>`
+        </div>
+    `
         )
 }
